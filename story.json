@@ -1,0 +1,206 @@
+{
+  "comment1": "OBJECT WITH PROPERTIES",
+
+  "meta": {
+    "title": "Meowstery",
+    "subtitle": "A cat-tastic journey through space and time",
+    "version": "Version 1.0"
+  },
+
+  "comment2": "ARRAY WITH OBJECTS",
+
+  "story": [
+    {
+      "id": 0,
+      "choice": "Begrüßung",
+      "intro": "Guten Tag, flauschiger Freund und ein herzliches Miau! Bereit für ein Abenteuer? Schlüpfe in die Rolle unserer Heldin Luna und mache dich auf in ein Abenteuer durch fantastische Welten voller Spannung, Geheimnisse und unerwarteter Wendungen. Tauche ein in eine faszinierende Welt und entdecke dabei interessante Fakten und fesselnde Katzengeschichten. Auf dieser Reise lässt du Zeit und Raum hinter dir: Luna erforscht alte Zivilisationen, geht den Geheimnissen des Mittelalters auf den Grund und wirft einen Blick in die Zukunft. Aber sei gewarnt: Dieses Abenteuer hält nicht nur unterhaltsame Abenteuer für dich und Luna bereit, sondern auch unheimliche Begebenheiten und Herausforderungen, denen Luna sich mit deiner Hilfe stellen muss, um am Ende ein großes Geheimnis zu lüften, das über das Schicksal aller Lebenwesen entscheidet.",
+      "thisLinksTo": [1]
+    },
+    {
+      "id": 1,
+      "choice": ["Lass uns die Reise beginnen!"],
+      "text": "In einer beschaulichen Vorstadtsiedlung, umgeben von duftenden Blumenbeeten und sanft wiegenden Bäumen, führt eine ganz gewöhnliche Hauskatze namens Luna ihr unbeirrtes, ganz normales Katzenleben. Wie jeden Morgen streift sie neugierig durch den Garten, der mit zunehmendem Sonnenaufgang nach und nach erwacht. Ihre Samtpfoten gleiten sanft durch das vom nächtlichen Sommerregen noch nasse Gras, die Luft ist erfüllt von süßem Magnolienduft.Ein goldener Sonnenstrahl bricht sich zart im Morgentau, als Luna wie jeden Morgen neugierig durch den erwachenden Garten streift. Ihre Samtpfoten gleiten sanft durch das vom nächtlichen Regen noch nasse Gras. Ein Hauch Mondblumenduft liegt in der Luft und umschmeichelt sanft Lunas Nase. Inmitten dieser verzauberten Szenerie entdeckt Luna etwas, das ihre Neugier weckt: Ein geheimnisvolles Portal, verborgen zwischen den Mondblumen. Eine leise Ahnung von Abenteuer kitzelt ihre empfindlichen Schnurrhaare, während sie neugierig näher schleicht. Luna spürt, dass dieses Portal mehr ist als nur ein einfacher Durchgang. Was soll sie tun?",
+      "thisLinksTo": [2, 3]
+    },
+    {
+      "id": 2,
+      "choice": ["Durch das Portal springen"],
+      "text": "Luna wagt den Sprung ins Unbekannte und landet in einer längst vergangenen Zeit. Ein geheimnisvoll flüsternder Wüstenwind umhüllt die kleine Katze. Das gleißende Sonnenlicht schmälert Lunas dunkle Pupillen zu einem hauchdünnen Schlitz. Vor ihr ragen riesige, spitz zulaufende Pyramiden in den wolkenlosen Himmel, fast so als würden sie die Sonne selbst herausfordern wollen. In der Ferne erblickt sie eine Stadt. ",
+      "thisLinksTo": [7, 8]
+    },
+    {
+      "id": 3,
+      "choice": ["Das Portal erst einmal beobachten..."],
+      "text": "Luna beobachtet das Portal vorsichtig und überlegt sich ihre nächsten Schritte. Plötzlich bemerkt sie, dass das Portal zu flackern beginnt, so als ob es kurz davor wäre, sich zu schließen. Sie spürt, wie sie eine unsichtbare Kraft zum Portal zieht, und zugleich kommt eine große Unsicherheit in ihr auf. Sie hat nur noch einen Moment Zeit, bevor es verschwindet. Was nun?",
+      "thisLinksTo": [2, 4]
+    },
+    {
+      "id": 4,
+      "choice": [
+        "Das ist Luna zu gefährlich, das Portal könnte instabil sein. Lieber aus sicherer Entfernung mehr darüber herausfinden."
+      ],
+      "text": "Oh nein, das Portal ist verschwunden. Doch Luna erinnert sich an sonderbare Zeichen, die sie auf dem Portal erkennen konnte.",
+      "thisLinksTo": [5, 6]
+    },
+    {
+      "id": 5,
+      "choice": [
+        "In die Bibliothek gehen und ein Buch über Portale ausleihen."
+      ],
+      "text": "",
+      "thisLinksTo": []
+    },
+    {
+      "id": 6,
+      "choice": ["Nach weiteren Spuren im Garten suchen"],
+      "text": "",
+      "thisLinksTo": []
+    },
+    {
+      "id": 7,
+      "choice": ["In die Stadt gehen"],
+      "text": "Lunas Pfoten tappen über die sandigen Straßen der Stadt, während sie den Trubel der Stadt in sich aufnimmt. Alles erscheint aufregend und zugleich überwältigend. Luna schlendert durch die antiken Straßen, die von beeindruckenden Tempeln und Monumenten flankiert sind. Sie bewundert die majestätische Architektur und die kunstvollen Hieroglyphen, die die Geschichten und Legenden des alten Ägypten erzählen. ",
+      "thisLinksTo": []
+    },
+    {
+      "id": 8,
+      "choice": ["Die Pyramiden erkunden"],
+      "text": "Luna fühlt sich magisch von den majestätischen, über die endlose Wüstenlandschaft ragenden Pyramiden angezogen. Die Hitze hier draußen in der Wüste wird immer gnadenloser...Luna überlegt kurz: 'Doch lieber die Stadt gehen und erst einmal nach Wasser suchen oder im kühlen Inneren der Pyramiden der Sonne entfliehen?'",
+      "thisLinksTo": [7, 9]
+    },
+    {
+      "id": 9,
+      "choice": ["Eine Pyramide betreten"],
+      "text": "Luna ist entschlossen, das Innere der Pyramiden zu erkunden. Als sie schließlich den Eingang findet, wagt sie sich hinein ins Dunkel. An der linken Wand erblickt Luna im Lichte einer Fackel eine Wandmalerei. Rechts von ihr steht eine Katzenartige Statue.",
+      "thisLinksTo": [10, 13]
+    },
+    {
+      "id": 10,
+      "choice": ["Wandmalerei deuten"],
+      "text": "Die Hieroglyphen berichten von einem uralten Katzenkult und ägyptischen Gottheiten, die diesen Ort mit ihren mystischen Kräften beschützen. Es könnte sich später als sehr nützlich erweisen, die Malereien zu entschlüsseln.",
+      "thisLinksTo": []
+    },
+    {
+      "id": 11,
+      "choice": [""],
+      "text": "",
+      "thisLinksTo": []
+    },
+    {
+      "id": 12,
+      "choice": [""],
+      "text": "",
+      "thisLinksTo": []
+    },
+    {
+      "id": 13,
+      "choice": ["Katzenstatue untersuchen"],
+      "text": "Luna schleicht um die Statue herum, betrachtet sie von oben bis unten. Auf einmal hört sie eine Stimme: 'Ich bin Bastet, die Hüterin dieser heiligen Stätte, eine Wächterin aus längst vergessenen Zeiten! Wie töricht von dir, diesen heiligen Ort zu betreten. Doch bevor du weitergehst, musst du dich einem Test unterziehen, um deine Würdigkeit zu beweisen. Sieh dich vor, deine Antworten werden das Schicksal deines Weges bestimmen. Nimmst du die Herausforderung an?'",
+      "thisLinksTo": [14, 15]
+    },
+    {
+      "id": 14,
+      "choice": ["die Herausforderung annehmen"],
+      "text": "Bastet: 'So sei es, Luna. Dein Mut ist lobenswert. Doch bedenke, dass die Fragen, die ich stelle, nicht leichtfertig zu beantworten sind. Sie werden deine wahre Natur und deine Absichten enthüllen. Höre gut zu und antworte mit bedacht. Du hast drei Versuche und musst alle Fragen richtig beantworten.'",
+      "test": [
+        {
+          "question": "Wie viele Seiten hat eine ägyptische Pyramide?",
+          "answer": 4
+        },
+        {
+          "question": "Welche Zeichen benutzten die alten Ägypter, um Geschichten für alle Ewigkeit festzuschreiben?",
+          "answer": "Hieroglyphen"
+        },
+        {
+          "question": "Osiris ist der Gott des ...",
+          "answer": "Jenseits"
+        },
+        {
+          "question": "Wie heißt der Sonnengott im alten Ägypten?",
+          "answer": ["Ra", "Re"]
+        }
+      ],
+      "thisLinksTo": [16]
+    },
+    {
+      "id": 15,
+      "choice": ["sich an der Statue vorbeischleichen"],
+      "text": "Luna sucht nach einem anderen Weg, um an Bastet vorbeizukommen, ohne sich der Prüfung zu stellen. Durch geschicktes Schleichen gelingt es ihr, die Wächterin zu umgehen, jedoch verpasst sie die Gelegenheit, wertvolle Hinweise zu entdecken. Ihr Weg führt nun einen engen, dunklen Tunnel entlang. Es scheint, als würde Luna immer tiefer in die Tiefen der Pyramide hineingezogen werden. Lunas Kräfte schwinden. Sie versucht einen Ausweg zu finden, aber je weiter sie geht, desto verworrener werden die Gänge. Sie findet sich nach einer ganzen Weile an einer Weggabelung wieder. Doch wohin gehen?",
+      "thisLinksTo": [22, 23]
+    },
+    {
+      "id": 16,
+      "choice": [""],
+      "text": "Bastet: 'Du hast bewiesen, dass dein Wissen und deine Weisheit würdig sind, die Pfade dieser uralten Pyramide zu durchqueren. Möge die Weisheit deine Reise erleuchten. Ich gestatte dir, weiterzugehen, um die Geheimnisse dieser heiligen Stätte zu entdecken.' Bastet tritt zur Seite und eröffnet Luna den dahinterliegenden Durchgang, der Luna zu einer verborgenen Kammer führt. Darin findet sie eine antike Schriftrolle, ein Amulett und eine Pfeife. Außerdem entdeckt sie einen schmalen Gang, der geradeaus weiter zu führen scheint ...",
+      "thisLinksTo": [17, 18, 22]
+    },
+    {
+      "id": 17,
+      "choice": ["Schriftrolle lesen"],
+      "text": "'In den Tiefen der Zeit verborgen liegen die Geheimnisse der Portalöffnung, die es dem Reisenden ermöglichen, durch die Jahrhunderte zu wandeln und die Schleier der Vergangenheit, die Wirren der Gegenwart und die Ungewissheit der Zukunft zu lüften. Öffne dein Herz, Rufe die Weisheit deiner Vorfahren mit der Pfeife herbei, bündele die Energien mit dem Amulett und schreite mit reinem Herzen und klarem Geist durch das sich öffnende Portal.' Nun, da Luna erfahren hat, wie sie selbst durch die Zeit reisen kann, trifft sie eine Entscheidung:",
+      "thisLinksTo": [18, 19, 20, 21]
+    },
+    {
+      "id": 18,
+      "choice": [
+        "Vorerst hier bleiben, denn es gibt noch so viel zu entdecken"
+      ],
+      "text": "Luna beschließt zu bleiben. Sie möchte mehr über das alte Ägypten und vor allem über Bastet erfahren. In der Pyramide findet sie heraus, dass Katzen damals als heilige Tiere der Bastet verehrt und in Bubastis in einem eigenen Katzenfriedhof beigesetzt wurden. FORTSETZUNG FOLGT. ",
+      "thisLinksTo": []
+    },
+    {
+      "id": 19,
+      "choice": ["Das Portal öffnen und in die Zukunft reisen"],
+      "text": "Luna findet sich in einer düsteren und trostlosen Zukunft wieder. Die Stadt, in der sie landet, ist von Ruinen und Trümmern übersät. Der Himmel ist von dunklen Wolken verhangen. Die Katzen leben in Hunger und Unterdrückung, während eine tyrannische Regierung mit eiserner Pfote herrscht. Als sie die verlassenen Straßen erkundet, stößt sie auf eine geheime Widerstandsgruppe, die sich der Tyrannei der Regierung widersetzt. Die Mitglieder der Gruppe sind fest entschlossen, die alten Weisheiten der ägyptischen Katzenhüterin Bastet zu bewahren und eine bessere Zukunft zu schaffen. Luna erfährt, dass die alten ägyptischen Überlieferungen dabei helfen können, die Macht der Regierung zu brechen. Kann Luna die Überlieferungen entschlüsseln? Wird sie sich mit der Widerstandsgruppe verbünden und kann die Welt gerettet werden? FORTSETZUNG FOlGT",
+      "thisLinksTo": []
+    },
+    {
+      "id": 20,
+      "choice": ["Das Portal öffnen und in die Vergangenheit reisen"],
+      "text": "Luna tritt durch das geöffnete Portal und findet sich plötzlich in einer düsteren und bedrohlichen Umgebung wieder. Sie steht auf einem staubigen Weg, umgeben von dunklen Wäldern und verlassenen Ruinen. Die Luft ist schwer von der Angst und dem Aberglauben, die das Mittelalter prägen. Die Katzen, die dort leben, sind schreckhaft und zwielichtig. Sie werfen misstrauische Blicke auf Luna, die wie eine Fremde aus einer anderen Zeit wirkt. 'Was ist hier nur los?', wundert sich Luna. Das schrille, ohrenbetäubende Läuten einer Kirchenglocke reißt Luna aus ihren Gedanken. Eine Prozession zieht durch das Dorf, Menschenwesen murmeln und tuscheln leise untereinander. Luna hört Gerüchte über Hexenverbrennungen und Inquisitionen, die das Land terrorisieren. Gefahr liegt in der Luft. Luna möchte so schnell wie möglich wieder weg von ihr, doch eine folgenreiche Begegenung verstrickt Luna immer tiefer in dunkle Machenschaften und den Wunsch, die Wahrheit ans Licht zu bringen. FORTSETZUNG FOLGT",
+      "thisLinksTo": []
+    },
+    {
+      "id": 21,
+      "choice": ["nach Hause zurückkehren"],
+      "text": "Luna hat erst einmal genung. Sie ist froh, dass Sie nun herausgefunden hat, wie man durch die Zeit reist. Sie gönnt sich erst mal eine Auszeit und achtet auf ihre Abenteuer-Life-Balance. Das geht am besten auf der Veranda ihres wunderschönen Gartens. Geheimnis hin oder her! ENDE",
+      "thisLinksTo": []
+    },
+    {
+      "id": 22,
+      "choice": ["geradeaus weitergehen"],
+      "text": "Nach einiger Zeit stößt Luna auf einen Sarkophag, der mit Malereien und Edelsteinen verziert ist. Der Sarkophag steht auf einem Altar, der rechts und links von zwei Fackeln beleuchtet wird. Plötzlich beginnt die Flamme zu flackern und wirft merkwürdige Schatten an die Wände: Katzenartige Wesen tanzen an den Wänden. Da hört Luna eine geisterhafte, fauchende Stimme: 'Eindringling! Wer wagt es uns zu stören! Nun sitzt du in der Falle. Doch wir geben dir eine Chance, da du eine der unseren bist. Löse das Rätsel der Katzenmumie und du darfst die Pyramide lebend verlassen!'",
+      "thisLinksTo": [27]
+    },
+    {
+      "id": 23,
+      "choice": ["abbiegen"],
+      "text": "Luna biegt ab. Gleich darauf entdeckt sie eine Nische in der Wand. Die Nische ist sehr schmal, aber welch ein Glück: Luna kann sich als Katze nahezu überall hindurchquetschen.",
+      "thisLinksTo": [24, 25]
+    },
+    {
+      "id": 24,
+      "choice": ["Ins Ungewisse der Nische schlüpfen"],
+      "text": "Entschlossen, jeden möglichen Ausweg zu erkunden, zwängt sich Luna durch die Öffnung und gelangt in einen schmalen, dunklen Tunnel. Erleichterung durchströmt sie, als sie bemerkt, dass sie einen Ausgang aus der Pyramide gefunden hat.",
+      "thisLinksTo": [26]
+    },
+    {
+      "id": 25,
+      "choice": ["lieber wieder umdrehen und den anderen Weg nehmen"],
+      "text": "Zum Glück warst du noch nicht allzu weit gelaufen und hast die Wegkreuzung wiedergefunden. Du gehst nun den anderen Weg.",
+      "thisLinksTo": [22]
+    },
+    {
+      "id": 26,
+      "choice": ["Zurück im Tageslicht"],
+      "text": "Als sie die Sonne auf ihrer Haut spürt und den weiten Himmel über sich sieht, fühlt sich Luna trotz Erschöpfung erleichtert und dankbar für ihre Entdeckung. Doch sie weiß, dass die Abenteuer noch lange nicht vorbei sind und dass sie noch viele Gefahren überwinden muss, bevor sie endgültig sicher ist. Mit einem entschlossenen Blick nach vorn macht sich Luna auf den Weg, bereit für alles, was ihr noch bevorsteht. FORTSETZUNG FOLGT",
+      "thisLinksTo": []
+    },
+    {
+      "id": 27,
+      "choice": ["Das Rätsel der Katzenmumie"],
+      "text": "Auf einem Podest sieht Luna drei goldene Schalen. Jede Schale ist mit einer gold glänzenden Zahl von 1 bis 3 verziert. In jeder Schale liegt jeweils eine Opfergabe: In Schale 1 liegt eine Feder. In Schale 2 liegt ein Stück Fleisch. In Schale 3 liegt eine Rassel. Neben den Schalen befindet sich eine Inschrift: 'Bastet, Göttin und Behüterin aller Katzen, sehnt sich nach dem Opfer, das ihre Seele am meisten verzückt.' Wähle weise, denn nur eine Schale führt in die Freiheit.",
+      "thisLinksTo": [26]
+    }
+  ]
+}

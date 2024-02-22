@@ -1,5 +1,7 @@
 const readline = require("readline-sync");
 
+const { catTemplate } = require("./data/templates");
+
 // fs (file system) module von node.js einbinden, um auf Dateien zuzugreifen
 const fs = require("fs");
 const { format } = require("path");
@@ -12,6 +14,10 @@ const title = data.meta.title; // meta = Objekt
 const subtitle = data.meta.subtitle;
 const version = data.meta.version;
 const storyArray = data.story; // Array mit Objekten
+
+// Startbildschirm anzeigen
+console.log(catTemplate);
+// console.clear; //TODO: Herausfinden, wo ich clearen muss, damit das template nur 1x am Anfang angezeigt wird und dann nicht mehr solange das Spiel läuft
 
 // .................................
 //% Text-Formatierungsfunktion
@@ -85,6 +91,7 @@ function findText(searched) {
   // check User Input
 
   const userInput = readline.question("Triff eine Entscheidung:");
+  console.clear(); // Bisherige Ausgabe in der Konsole löschen //! funktioniert aber bisher nur beim Text, nicht beim template
   const userDecision = parseInt(userInput);
   if (
     !isNaN(userDecision) &&

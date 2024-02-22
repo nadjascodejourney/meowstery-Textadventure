@@ -43,20 +43,20 @@
       "choice": [
         "In die Bibliothek gehen und ein Buch über Portale ausleihen."
       ],
-      "text": "",
-      "thisLinksTo": []
+      "text": "Luna geht in die Bibliothek. Sie liest jede Menge Bücher über Portale. Ob sie die Zeichen des Portals darin wiederfinden und deuten kann? FORTSETZUNG FOLGT",
+      "thisLinksTo": [28]
     },
     {
       "id": 6,
       "choice": ["Nach weiteren Spuren im Garten suchen"],
-      "text": "",
-      "thisLinksTo": []
+      "text": "Luna durchkämmt den Garten und findet.... FORTSETZUNG FOLGT!",
+      "thisLinksTo": [28]
     },
     {
       "id": 7,
       "choice": ["In die Stadt gehen"],
-      "text": "Lunas Pfoten tappen über die sandigen Straßen der Stadt, während sie den Trubel der Stadt in sich aufnimmt. Alles erscheint aufregend und zugleich überwältigend. Luna schlendert durch die antiken Straßen, die von beeindruckenden Tempeln und Monumenten flankiert sind. Sie bewundert die majestätische Architektur und die kunstvollen Hieroglyphen, die die Geschichten und Legenden des alten Ägypten erzählen. ",
-      "thisLinksTo": []
+      "text": "Lunas Pfoten tappen über die sandigen Straßen der Stadt, während sie den Trubel der Stadt in sich aufnimmt. Alles erscheint aufregend und zugleich überwältigend. Luna schlendert durch die antiken Straßen, die von beeindruckenden Tempeln und Monumenten flankiert sind. Sie bewundert die majestätische Architektur und die kunstvollen Hieroglyphen, die die Geschichten und Legenden des alten Ägypten erzählen. FORTSETZUNG FOLGT ",
+      "thisLinksTo": [28]
     },
     {
       "id": 8,
@@ -142,19 +142,19 @@
         "Vorerst hier bleiben, denn es gibt noch so viel zu entdecken"
       ],
       "text": "Luna beschließt zu bleiben. Sie möchte mehr über das alte Ägypten und vor allem über Bastet erfahren. In der Pyramide findet sie heraus, dass Katzen damals als heilige Tiere der Bastet verehrt und in Bubastis in einem eigenen Katzenfriedhof beigesetzt wurden. FORTSETZUNG FOLGT. ",
-      "thisLinksTo": []
+      "thisLinksTo": [28]
     },
     {
       "id": 19,
       "choice": ["Das Portal öffnen und in die Zukunft reisen"],
       "text": "Luna findet sich in einer düsteren und trostlosen Zukunft wieder. Die Stadt, in der sie landet, ist von Ruinen und Trümmern übersät. Der Himmel ist von dunklen Wolken verhangen. Die Katzen leben in Hunger und Unterdrückung, während eine tyrannische Regierung mit eiserner Pfote herrscht. Als sie die verlassenen Straßen erkundet, stößt sie auf eine geheime Widerstandsgruppe, die sich der Tyrannei der Regierung widersetzt. Die Mitglieder der Gruppe sind fest entschlossen, die alten Weisheiten der ägyptischen Katzenhüterin Bastet zu bewahren und eine bessere Zukunft zu schaffen. Luna erfährt, dass die alten ägyptischen Überlieferungen dabei helfen können, die Macht der Regierung zu brechen. Kann Luna die Überlieferungen entschlüsseln? Wird sie sich mit der Widerstandsgruppe verbünden und kann die Welt gerettet werden? FORTSETZUNG FOlGT",
-      "thisLinksTo": []
+      "thisLinksTo": [28]
     },
     {
       "id": 20,
       "choice": ["Das Portal öffnen und in die Vergangenheit reisen"],
       "text": "Luna tritt durch das geöffnete Portal und findet sich plötzlich in einer düsteren und bedrohlichen Umgebung wieder. Sie steht auf einem staubigen Weg, umgeben von dunklen Wäldern und verlassenen Ruinen. Die Luft ist schwer von der Angst und dem Aberglauben, die das Mittelalter prägen. Die Katzen, die dort leben, sind schreckhaft und zwielichtig. Sie werfen misstrauische Blicke auf Luna, die wie eine Fremde aus einer anderen Zeit wirkt. 'Was ist hier nur los?', wundert sich Luna. Das schrille, ohrenbetäubende Läuten einer Kirchenglocke reißt Luna aus ihren Gedanken. Eine Prozession zieht durch das Dorf, Menschenwesen murmeln und tuscheln leise untereinander. Luna hört Gerüchte über Hexenverbrennungen und Inquisitionen, die das Land terrorisieren. Gefahr liegt in der Luft. Luna möchte so schnell wie möglich wieder weg von ihr, doch eine folgenreiche Begegenung verstrickt Luna immer tiefer in dunkle Machenschaften und den Wunsch, die Wahrheit ans Licht zu bringen. FORTSETZUNG FOLGT",
-      "thisLinksTo": []
+      "thisLinksTo": [28]
     },
     {
       "id": 21,
@@ -197,6 +197,12 @@
       "choice": ["Das Rätsel der Katzenmumie"],
       "text": "Auf einem Podest sieht Luna drei goldene Schalen. Jede Schale ist mit einer gold glänzenden Zahl von 1 bis 3 verziert. In jeder Schale liegt jeweils eine Opfergabe: In Schale 1 liegt eine Feder. In Schale 2 liegt ein Stück Fleisch. In Schale 3 liegt eine Rassel. Neben den Schalen befindet sich eine Inschrift: 'Bastet, Göttin und Behüterin aller Katzen, sehnt sich nach dem Opfer, das ihre Seele am meisten verzückt.' Wähle weise, denn nur eine Schale führt in die Freiheit.",
       "thisLinksTo": [26]
+    },
+    {
+      "id": 28,
+      "choice": ["FORTSETZUNG FOLGT"],
+      "text": "An dieser Stelle endet dieser Spielstrang vorerst. Du hast eine Idee, wie es weitergehen könnte? Schreib mir deinen Vorschlag über probst.nadja@dci-student.org. Ich werde alle eingehenden Ideen sammeln und versuchen, sie in der Geschichte unterzubringen. Vielen Dank! Du kannst das Spiel nun beenden indem du Strg + C drückst. Wenn du möchtest, kannst du nochmal von vorne beginnen und einem anderen Verlauf der Geschichte folgen.",
+      "thisLinksTo": []
     }
   ]
 }

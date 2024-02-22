@@ -16,15 +16,16 @@ const version = data.meta.version;
 const storyArray = data.story; // Array mit Objekten
 
 // Startbildschirm anzeigen
-console.log(catTemplate);
-// console.clear; //TODO: Herausfinden, wo ich clearen muss, damit das template nur 1x am Anfang angezeigt wird und dann nicht mehr solange das Spiel läuft
+// console.log(catTemplate);
+// console.clear;
+//TODO: 1. Herausfinden, wo ich clearen muss, damit das template nur 1x am Anfang angezeigt wird und dann nicht mehr solange das Spiel läuft.
 
 // .................................
 //% Text-Formatierungsfunktion
 // Erläuterung siehe readme.md
 
 function formatText(text, maxLength) {
-  const words = text.split(" "); //! Achtung, Text muss ein string sein; wird durch .split zu substrings im array 'words'
+  const words = text.split(" ");
   let formattedText = "";
   let lineLength = 0;
 
@@ -57,7 +58,7 @@ function findText(searched) {
   let text;
   for (let x = 0; x < storyArray.length; x++) {
     if (storyArray[x].id == searched) {
-      // Hier testweise den Wert von storyArray[x].text ausgeben, um Ausgabe/Datentyp zu checken
+      // Test
       // console.log("Text aus storyArray[x].text:", storyArray[x].text);
 
       text = storyArray[x].text + "\n\n";
@@ -69,11 +70,11 @@ function findText(searched) {
 
         let situationalText = findId(goTo);
 
-        // Test, um zu prüfen, welche Ausgabe bzw. welcher Datentyp hier erfolgt
+        // Test
         // console.log("situationalText:", situationalText);
         // console.log("Aktueller Wert von text vor der Zeile:", text);
 
-        situationalText = situationalText.join(" "); //! Achtung, situationalText ist zunächst ein Array, muss also vor der Formattierung und der Konkatenierung in string umgewandelt werden
+        situationalText = situationalText.join(" ");
 
         //% Textformatierung Situationstext und Maximale Zeilenlänge
         situationalText = formatText(situationalText, 60);
@@ -89,9 +90,14 @@ function findText(searched) {
   console.log("\n>" + text + "\n");
 
   // check User Input
+  // ? Soll ich hier lieber eine eigene Funktion schreiben, die ich dann hier aufrufe?
 
   const userInput = readline.question("Triff eine Entscheidung:");
-  console.clear(); // Bisherige Ausgabe in der Konsole löschen //! funktioniert aber bisher nur beim Text, nicht beim template
+
+  console.clear();
+  // Bisherige Ausgabe in der Konsole löschen
+  //! funktioniert aber bisher nur beim Text, nicht beim template
+
   const userDecision = parseInt(userInput);
   if (
     !isNaN(userDecision) &&
@@ -106,4 +112,19 @@ function findText(searched) {
     findText(searched);
   }
 }
-findText(0);
+// findText(0); // auskommentieren, wenn unten startGame() aktiv ist
+
+// .....................................
+
+//* Lösungsversuch um Templateproblem zu lösen, klappt aber bisher auch nicht
+let gameStarted = false;
+
+function startGame() {
+  if (!gameStarted) {
+    console.log(catTemplate);
+    gameStarted = true;
+  }
+  findText(0);
+}
+
+startGame();

@@ -3,17 +3,17 @@ const readline = require("readline-sync");
 // fs (file system) module von node.js einbinden, um auf Dateien zuzugreifen
 const fs = require("fs");
 
-// Lade die Spielgeschichte aus der JSON-Datei
+// Spielgeschichte aus der JSON-Datei laden
 const data = JSON.parse(fs.readFileSync("story.json", "utf-8"));
 
-const title = data.meta.title;
+// Vereinfachung durch Zuweisung => kürzerer Code
+const title = data.meta.title; // meta = Objekt
 const subtitle = data.meta.subtitle;
 const version = data.meta.version;
-
-const storyArray = data.story;
+const storyArray = data.story; // Array mit Objekten
 
 //>> 1. Funktion
-// Finds the choice(s) for a specific situation in the story by id and returns them.
+//* Findet Auswahlmöglichkeiten für eine bestimmte Situation in der Story anhand der ID des jeweiligen Objekts und gibt sie zurück.
 function findId(searchedId) {
   for (let i = 0; i < storyArray.length; i++) {
     if (storyArray[i].id == searchedId) {
@@ -21,9 +21,10 @@ function findId(searchedId) {
     }
   }
 }
+// call erfolgt erst in findText()!
 
 //>> 2. Zweite Funktion
-// Finds the text and choices for a particular situation in the story, displays them and prompts the user to make a decision.
+//* Findet Text und Auswahlmöglichkeiten für eine bestimmte Situation in der Story, zeigt diese an und fordert Benutzer auf, Entscheidung zu treffen.
 function findText(searched) {
   let text;
   for (let x = 0; x < storyArray.length; x++) {

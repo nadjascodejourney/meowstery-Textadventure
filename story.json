@@ -1,19 +1,15 @@
 {
-  "comment1": "OBJECT WITH PROPERTIES",
-
   "meta": {
     "title": "Meowstery",
     "subtitle": "A cat-tastic journey through space and time",
     "version": "Version 1.0"
   },
 
-  "comment2": "ARRAY WITH OBJECTS",
-
   "story": [
     {
       "id": 0,
       "choice": "Begrüßung",
-      "intro": "Guten Tag, flauschiger Freund und ein herzliches Miau! Bereit für ein Abenteuer? Schlüpfe in die Rolle unserer Heldin Luna und mache dich auf in ein Abenteuer durch fantastische Welten voller Spannung, Geheimnisse und unerwarteter Wendungen. Tauche ein in eine faszinierende Welt und entdecke dabei interessante Fakten und fesselnde Katzengeschichten. Auf dieser Reise lässt du Zeit und Raum hinter dir: Luna erforscht alte Zivilisationen, geht den Geheimnissen des Mittelalters auf den Grund und wirft einen Blick in die Zukunft. Aber sei gewarnt: Dieses Abenteuer hält nicht nur unterhaltsame Abenteuer für dich und Luna bereit, sondern auch unheimliche Begebenheiten und Herausforderungen, denen Luna sich mit deiner Hilfe stellen muss, um am Ende ein großes Geheimnis zu lüften, das über das Schicksal aller Lebenwesen entscheidet.",
+      "text": "Guten Tag, flauschiger Freund und ein herzliches Miau! Bereit für ein Abenteuer? Schlüpfe in die Rolle unserer Heldin Luna und mache dich auf in ein Abenteuer durch fantastische Welten voller Spannung, Geheimnisse und unerwarteter Wendungen. Tauche ein in eine faszinierende Welt und entdecke dabei interessante Fakten und fesselnde Katzengeschichten. Auf dieser Reise lässt du Zeit und Raum hinter dir: Luna erforscht alte Zivilisationen, geht den Geheimnissen des Mittelalters auf den Grund und wirft einen Blick in die Zukunft. Aber sei gewarnt: Dieses Abenteuer hält nicht nur unterhaltsame Abenteuer für dich und Luna bereit, sondern auch unheimliche Begebenheiten und Herausforderungen, denen Luna sich mit deiner Hilfe stellen muss, um am Ende ein großes Geheimnis zu lüften, das über das Schicksal aller Lebenwesen entscheidet.",
       "thisLinksTo": [1]
     },
     {

@@ -1,4 +1,6 @@
-const catTemplate = `
+// import { colors, symbols } from "./colors.js";
+
+export const catTemplate = `
     *      ,ooooooo.            *
           88888888888    .
          OOOOOOOOOOOOO
@@ -23,4 +25,5 @@ _/\\_   _/\\_/\\_/\\_/\\_/\\_/\\_/\\_/\\_/\\_/\\_/\\_/\\
 |  |  |  |  |  |  |  |  |  |  |  |  |  |  |    
  A catastic journey through time and space
 `;
-module.exports = { catTemplate };
+
+// module.exports = { catTemplate };

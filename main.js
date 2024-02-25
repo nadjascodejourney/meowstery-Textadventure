@@ -1,15 +1,31 @@
+//>> Projekt aufsetzen:
+
 import readlineSync from "readline-sync";
-// import { catTemplate } from "./data/templates";
-import data from "./story.json" assert { type: "json" };
-
-const { title, subtitle, version, story: storyArray } = data;
-
+import { catTemplate } from "./data/templates.js";
 // import colors from "./data/colors";
 // import symbols from "./data/symbols";
 
+// JSON file bzw. Daten der Geschichte mit ES Modules Node einlesen:
+// 1.
+import { readFile } from "fs/promises";
+// 2.
+async function readJSONFile(filePath) {
+  try {
+    const jsonData = await readFile(filePath, "utf-8");
+    return JSON.parse(jsonData);
+  } catch (error) {
+    console.error("Error reading JSON file:", error);
+    return null;
+  }
+}
+// 3.
+const data = await readJSONFile("./story.json");
+// 4.
+const { title, subtitle, version, story: storyArray } = data;
+
 // .................................
 
-//% Text-Formatierungsfunktion
+//>> Text-Formatierungsfunktion
 // Erläuterung siehe readme.md
 
 function formatText(text, maxLength) {
@@ -30,9 +46,9 @@ function formatText(text, maxLength) {
 // .................................
 
 function startTextAdventure() {
-  // const startScreen = readlineSync.question(catTemplate); // question clg automatically
+  const startScreen = readlineSync.question(catTemplate); // question clg automatically
 
-  //>> 1. Hauptfunktion
+  //>> findID Funktion
   //* Findet Auswahlmöglichkeiten für eine bestimmte Situation in der Story anhand der ID des jeweiligen Objekts und gibt sie zurück.
   function findId(searchedId) {
     for (let i = 0; i < storyArray.length; i++) {
@@ -43,10 +59,11 @@ function startTextAdventure() {
   }
   // call erfolgt erst in findText()!
 
-  //>> 2. Zweite Hauptfunktion
+  //>> 2. findText Funktion
   //* Findet Text und Auswahlmöglichkeiten für eine bestimmte Situation in der Story, zeigt diese an und fordert Benutzer auf, Entscheidung zu treffen.
   function findText(searched) {
     let text;
+    let amountOfElementsInLinksArray;
     for (let x = 0; x < storyArray.length; x++) {
       if (storyArray[x].id == searched) {
         // Test
@@ -82,11 +99,10 @@ function startTextAdventure() {
 
     // check User Input
     // ? Soll ich hier lieber eine eigene Funktion schreiben, die ich dann hier aufrufe?
+    // ? Soll der UserInput Code weiter oben stehen?
 
     const userInput = readlineSync.question("Triff eine Entscheidung:");
-
-    console.clear();
-    // Bisherige Ausgabe in der Konsole löschen
+    console.clear(); // Bisherige Ausgabe in der Konsole löschen, wenn User eine Entscheidung getroffen hat
     //! funktioniert aber bisher nur beim Text, nicht beim template
 
     const userDecision = parseInt(userInput);
@@ -103,18 +119,7 @@ function startTextAdventure() {
       findText(searched);
     }
   }
-  findText(0); // auskommentieren, wenn unten startGame() aktiv ist
+  findText(0);
 }
 startTextAdventure();
 // .....................................
-
-//* Lösungsversuch um Templateproblem zu lösen, klappt aber bisher auch nicht
-// let gameStarted = false;
-// function startGame() {
-//   if (!gameStarted) {
-//     console.log(catTemplate);
-//     gameStarted = true;
-//   }
-//   findText(0);
-// }
-// startGame();

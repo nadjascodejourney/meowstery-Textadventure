@@ -8,7 +8,9 @@
 
 ---
 
-# readline sync und JSON Daten laden
+# readline sync und JSON Daten laden mit require
+
+Ich habe später zwar dann doch mit import/export und modules gearbeitet, aber man könnte es auch so machen:
 
 1. Zuerst wird die readline-sync-Bibliothek importiert, um Benutzereingaben im Terminal zu lesen.
 
@@ -72,3 +74,7 @@ console.log("Aktueller Wert von text vor der Zeile:", text);
 Diese Teytbefehle schreibt man VOR den Call der Funktion formatText(). So wird das Skript noch gelesen und zu gleich kann man in der Konsole aber auch noch die Fehlermeldung sehen.
 
 Die Konkatenation führte zu einem unerwartetem Ergebnis bzw. zu der Fehlermeldung.
+
+# JSON und ES modules node
+
+// import data from "./story.json" assert { type: "json" }; => klappt nicht, siehe auch: https://www.stefanjudis.com/snippets/how-to-import-json-files-in-es-modules-node-js/

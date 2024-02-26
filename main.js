@@ -37,8 +37,13 @@ function formatText(text, maxLength) {
   let formattedText = "";
   let lineLength = 0;
 
-  words.forEach((word) => {
-    if (lineLength + word.length + 1 > maxLength) {
+  words.forEach((word, index) => {
+    let isUppercase = /^[A-Z]/.test(word);
+    if (
+      lineLength + word.length + 1 > maxLength &&
+      index != 0 &&
+      !isUppercase
+    ) {
       formattedText += "\n"; // man könnte hier noch weitere Zeile Abstand eingeben
       lineLength = 0;
     }
@@ -52,6 +57,14 @@ function formatText(text, maxLength) {
 
 //>> START DES PROGRAMMS
 
+function clearConsole() {
+  // process.stdout.isTTY => This is a property in Node.js
+  if (process.stdout.isTTY) {
+    // standard output
+    process.stdout.write("\x1Bc");
+  }
+}
+
 function startTextAdventure() {
   console.log(catTemplate);
   const pressStart = readlineSync.question(
@@ -59,11 +72,14 @@ function startTextAdventure() {
   );
   console.clear();
 
+  // menü
   const mainMenu = readlineSync.question(mainMenuTemplate);
-  console.clear();
+
+  clearConsole();
 
   switch (mainMenu.toLowerCase()) {
     case "p":
+      console.clear();
       console.log("Starte das Spiel...");
 
       //>> 1. Funktion für Situationen, 2. Funktion für Text und Auswahlmöglichkeiten
@@ -164,17 +180,20 @@ function startTextAdventure() {
 
       break;
     case "l":
+      console.clear();
       console.log("Luna wird vorgestellt...");
       break;
     case "i":
+      console.clear();
       let gameinfo = formatText(infotext, 100);
       console.log("Über das Spiel...\n\n" + gameinfo + "\n");
-
       break;
     case "b":
+      console.clear();
       console.log("Beende das Spiel...");
       return;
     default:
+      console.clear();
       console.log("Katzenminze im Kopf?. Bitte versuche es erneut.");
       startTextAdventure();
       return;

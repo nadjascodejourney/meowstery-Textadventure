@@ -12,7 +12,7 @@
     {
       "id": 0,
       "choice": "Begrüßung",
-      "text": "Guten Tag, flauschiger Freund und ein herzliches Miau \uD83D\uDC31 ! Bereit für ein Abenteuer? \n Schlüpfe in die Rolle unserer Heldin Luna und mache dich auf in eine fantastische Welt voller Spannung, Geheimnisse und unerwarteter Wendungen. Entdecke dabei interessante Fakten und fesselnde Katzengeschichten. \n Auf dieser Reise lässt du Zeit und Raum hinter dir: Luna erforscht alte Zivilisationen, geht den Geheimnissen des Mittelalters auf den Grund und wirft einen Blick in die Zukunft. Aber sei gewarnt: Dieses Abenteuer hält nicht nur unterhaltsame Situationen für dich und Luna bereit, sondern auch unheimliche Begebenheiten und Herausforderungen, denen Luna sich mit deiner Hilfe stellen muss, um am Ende ein großes Geheimnis zu lüften.",
+      "text": "Guten Tag, flauschiger Freund und ein herzliches Miau \uD83D\uDC31 ! Bereit für ein Abenteuer? \n Schlüpfe in die Rolle unserer Heldin Luna und mache dich auf in eine fantastische Welt voller Spannung, Geheimnisse und unerwarteter Wendungen. Entdecke dabei interessante Fakten und fesselnde Katzengeschichten. Auf dieser Reise lässt du Zeit und Raum hinter dir: Luna erforscht alte Zivilisationen, geht den Geheimnissen des Mittelalters auf den Grund und wirft einen Blick in die Zukunft. Aber sei gewarnt: Dieses Abenteuer hält nicht nur unterhaltsame Situationen für dich und Luna bereit, sondern auch unheimliche Begebenheiten und Herausforderungen, denen Luna sich mit deiner Hilfe stellen muss, um am Ende ein großes Geheimnis zu lüften.",
       "thisLinksTo": [1]
     },
     {
@@ -102,7 +102,7 @@
     {
       "id": 14,
       "choice": ["die Herausforderung annehmen \uD83D\uDCAC"],
-      "text": "Bastet: 'So sei es, Luna. Dein Mut ist lobenswert. Bedenke, dass die Fragen, die ich stelle, nicht leichtfertig zu beantworten sind. Sie werden deine wahre Natur und deine Absichten enthüllen. Du hast drei Versuche und musst alle Fragen richtig beantworten.'",
+      "text": "Bastet: 'So sei es, Luna. Dein Mut ist lobenswert. Bedenke, dass die Fragen, die ich stelle, nicht leichtfertig zu beantworten sind. Sie werden deine wahre Natur und deine Absichten enthüllen. Du hast musst alle Fragen richtig beantworten und hast nur einen Versuch!' Luna muss alle Fragen richtig beantworten, andernfalls muss sie das Spiel von vorne beginnen.",
       "quiz": [
         {
           "question": "Wie viele Seiten hat eine ägyptische Pyramide?",
@@ -132,7 +132,7 @@
     {
       "id": 16,
       "choice": ["Die Fragen beantworten \uD83D\uDCAC"],
-      "text": "Bastet: 'Du hast bewiesen, dass dein Wissen und deine Weisheit würdig sind, die Pfade dieser uralten Pyramide zu durchqueren. Ich gestatte dir, weiterzugehen, um die Geheimnisse dieser heiligen Stätte zu entdecken. Möge die Weisheit deine Reise erleuchten.' Bastet tritt zur Seite und eröffnet Luna den dahinterliegenden Durchgang, der zu einer verborgenen Kammer führt. Darin findet Luna eine antike Schriftrolle, ein Amulett und eine Pfeife. Außerdem entdeckt sie einen schmalen Gang, der geradeaus weiter zu führen scheint.",
+      "text": "Bastet: 'Glückwunsch! Du hast bewiesen, dass dein Wissen und deine Weisheit würdig sind, die Pfade dieser uralten Pyramide zu durchqueren. Ich gestatte dir, weiterzugehen, um die Geheimnisse dieser heiligen Stätte zu entdecken. Möge die Weisheit deine Reise erleuchten.' Bastet tritt zur Seite und eröffnet Luna den dahinterliegenden Durchgang, der zu einer verborgenen Kammer führt. Darin findet Luna eine antike Schriftrolle, ein Amulett und eine Pfeife. Außerdem entdeckt sie einen schmalen Gang, der geradeaus weiter zu führen scheint.",
       "thisLinksTo": [17, 18, 22]
     },
     {

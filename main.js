@@ -164,6 +164,54 @@ function startTextAdventure() {
                 text +
                 `${colors.g} > ${situationalText} ${colors.reset}` +
                 `\n${colors.c}(Wähle ${z})${colors.reset} \n\n`;
+
+              // .................................
+
+              //>> Quiz-Funktion (wenn in der Situation vorhanden)
+
+              function quiz() {
+                let quizPassed = false;
+
+                if (storyArray[x].quiz) {
+                  // Wenn Quiz vorhanden ist, durchlaufe die Fragen
+
+                  let correctAnswersCount = 0; // Zähler für richtige Antworten
+
+                  for (const quiz of storyArray[x].quiz) {
+                    console.log("\nFrage: " + quiz.question);
+                    const userAnswer = readlineSync.question("Antwort: ");
+                    if (
+                      userAnswer.toLowerCase() ===
+                      quiz.answer.toString().toLowerCase()
+                    ) {
+                      console.log("Richtig!");
+
+                      correctAnswersCount++; // Erhöhe den Zähler für richtige Antworten
+
+                      if (correctAnswersCount >= 4) {
+                        // Wenn 4 oder mehr aufeinanderfolgende Antworten richtig sind
+                        quizPassed = true;
+                        // Spieler soll in die nächste Situation gelangen
+                        break;
+                      }
+                    } else {
+                      console.log(
+                        "Das war leider falsch. Beginne die Prüfung erneut."
+                      );
+                      console.clear();
+                      startTextAdventure();
+                      return;
+                    }
+                  }
+                }
+
+                if (quizPassed) {
+                  console.clear();
+                  findText(storyArray[x].thisLinksTo[0]); // Wenn das Quiz bestanden ist, gehe zur nächsten Situation, die von der aktuellen Situation aus zugänglich ist (= thisLinksTo[0])
+                }
+              }
+              quiz();
+              // .................................
             }
             break;
           }
@@ -215,7 +263,8 @@ function startTextAdventure() {
       findText(0);
 
       break;
-    case "l":
+
+    case "l": //% L = Luna (Eigenschaften von Luna festlegen)
       console.clear();
       console.log(
         `${colors.c}Hier kannst du Luna ein paar Eigenschaften nach deinen Vorstellungen geben.${colors.reset}\n`
@@ -241,25 +290,21 @@ function startTextAdventure() {
         age ? age : "5",
         breed ? breed : "Ägyptische Mau",
         pattern ? pattern : "getupft",
-        character
-          ? character
-          : "freundlich, menschenbezogen, verspielt, intelligent",
-        specialFeature
-          ? specialFeature
-          : "Sie ist mit 50km/h die schnellste Katze unter den Hauskatzen."
+        character ? character : "freundlich, neugierig, verspielt, intelligent",
+        specialFeature ? specialFeature : "Sie kann lesen und sprechen"
       );
 
       catCharacter.push(myLuna);
 
       console.clear(); // vorherige Eingabeauforderungen clearen
 
-      console.log(`\n Jetzt ist Luna einzigartig! ${symbols.catHappy} \n `);
+      console.log(`\n Luna ist einzigartig! ${symbols.catHappy} \n `);
 
       console.log(
-        `Deine Luna ist ${colors.m}${myLuna.color}${colors.reset} und ${colors.b}${myLuna.age}${colors.reset} Jahre alt.`
+        `Luna ist ${colors.m}${myLuna.color}${colors.reset} und ${colors.b}${myLuna.age}${colors.reset} Jahre alt.`
       );
       console.log(
-        `Sie gehört zur Rasse ${colors.g}${myLuna.breed}${colors.reset}. Ihr Fellmuster ist: ${colors.r}${myLuna.pattern}${colors.reset}.`
+        `Sie gehört zur Katzenrasse ${colors.g}${myLuna.breed}${colors.reset}. Ihr Fellmuster ist: ${colors.r}${myLuna.pattern}${colors.reset}.`
       );
       console.log(
         `Lunas Charakter ist ${colors.c}${myLuna.character}${colors.reset}.`
@@ -275,7 +320,7 @@ function startTextAdventure() {
 
       break;
 
-    case "i":
+    case "i": //% I = Info (Spielinformationen anzeigen)
       console.clear();
       let gameinfo = formatText(infotext, 100);
 

@@ -78,3 +78,20 @@ Die Konkatenation führte zu einem unerwartetem Ergebnis bzw. zu der Fehlermeldu
 # JSON und ES modules node
 
 // import data from "./story.json" assert { type: "json" }; => klappt nicht, siehe auch: https://www.stefanjudis.com/snippets/how-to-import-json-files-in-es-modules-node-js/
+
+# Text in der Konsole kursiv ausgeben mit ANSI Escape
+
+Um Text in der Konsole kursiv auszugeben, wenn du mit Node.js und readline-sync in VSCode arbeitest, kannst du ANSI-Escape-Sequenzen verwenden. Hier ist ein Beispiel, wie du den Text kursiv formatieren kannst:
+
+javascript
+Copy code
+const readlineSync = require('readline-sync');
+
+// ANSI-Escape-Sequenzen für kursiven Text
+const italicText = "\x1b[3mKatzenminze im Kopf?. Bitte versuche es erneut.\x1b[0m";
+
+// Ausgabe des kursiven Texts
+console.log(italicText);
+In diesem Beispiel wird der Text zwischen \x1b[3m und \x1b[0m eingefügt. \x1b[3m aktiviert den Kursivmodus, und \x1b[0m deaktiviert alle angewendeten Formatierungen.
+
+Stelle sicher, dass du diese Ausgabe in einem Terminal ausführst, das ANSI-Escape-Sequenzen unterstützt, da nicht alle Terminals oder Konsolen diese unterstützen. In VSCode sollte die Ausgabe korrekt funktionieren.

@@ -3,12 +3,13 @@
 import readlineSync from "readline-sync";
 import { catTemplate, mainMenuTemplate } from "./data/templates.js";
 import { colors } from "./data/colors.js";
-// import symbols from "./data/symbols";
+import { Luna } from "./data/classes.js";
+import { symbols } from "./data/symbols.js";
 
 // JSON file bzw. Daten der Geschichte mit ES Modules Node einlesen:
 // 1.
 import { readFile } from "fs/promises";
-import { info } from "console";
+
 // 2.
 async function readJSONFile(filePath) {
   try {
@@ -25,6 +26,11 @@ const data = await readJSONFile("./story.json");
 const { story: storyArray } = data;
 
 const infotext = data.meta.infotext;
+const title = data.meta.title;
+const subtitle = data.meta.subtitle;
+const version = data.meta.version;
+const author = data.meta.author;
+const year = data.meta.year;
 
 // .................................
 // .................................
@@ -55,7 +61,8 @@ function formatText(text, maxLength) {
 // .................................
 // .................................
 
-//>> START DES PROGRAMMS
+//>> Funktion, um Starttemplates aus der Konsole zu leeren
+// clc alleine reicht nicht bei komplexeren Templates
 
 function clearConsole() {
   // process.stdout.isTTY => This is a property in Node.js
@@ -64,26 +71,54 @@ function clearConsole() {
     process.stdout.write("\x1Bc");
   }
 }
+// .................................
+// .................................
+
+//>> Startscreen
+
+console.log(catTemplate);
+readlineSync.question(`\n${colors.c}Drücke ENTER. ${colors.reset}`);
+console.clear();
+
+// .................................
+// .................................
+
+//>> globale Variablen
+//* Sammlung von Luna-Objekten, die im Spiel erstellt werden
+const catCharacter = [];
+//* Sammlung von Gegenständen, die Luna im Spiel findet
+const lunasBackbag = [];
+
+const backToMainMenu = `${colors.c}Drücke ENTER, um ins Hauptmenü zurückzukehren.${colors.reset}`;
+const tschauMiau = `\n${colors.y}Tschau Miau, bis zum nächsten Mal! ${colors.reset}\n`;
+
+// .................................
+// .................................
+
+//>> START DES PROGRAMMS
 
 function startTextAdventure() {
-  console.log(catTemplate);
-  const pressStart = readlineSync.question(
-    `\n${colors.c}Drücke ENTER. ${colors.reset}`
-  );
-  console.clear();
+  // console.log(catTemplate);
+  // const pressStart = readlineSync.question(
+  //   `\n${colors.c}Drücke ENTER. ${colors.reset}`
+  // );
+  // console.clear();
 
-  // menü
+  // Hauptmenü
   const mainMenu = readlineSync.question(mainMenuTemplate);
 
   clearConsole();
 
   switch (mainMenu.toLowerCase()) {
+    //% P = Play, L = Luna, I = Info, B = Beenden
+
+    // P = Play (Starte das Spiel)
     case "p":
       console.clear();
-      console.log("Starte das Spiel...");
+      console.log(`${colors.c}Starte das Spiel...${colors.reset}`);
 
       //>> 1. Funktion für Situationen, 2. Funktion für Text und Auswahlmöglichkeiten
-      //% 1. findID Funktion
+      //>> 1. findID Funktion
 
       //* Findet bestimmte Situation in der Story anhand der ID des jeweiligen Objekts und gibt sie zurück.
       function findId(searchedId) {
@@ -93,9 +128,9 @@ function startTextAdventure() {
           }
         }
       }
-      //! call erfolgt erst in findText()!
+      // call erfolgt erst in findText()!
 
-      //% 2. findText Funktion
+      //>> 2. findText Funktion
 
       //* Findet Text und Auswahlmöglichkeiten für eine bestimmte Situation in der Story, zeigt diese an und fordert Benutzer auf, Entscheidung zu treffen.
       function findText(searched) {
@@ -123,12 +158,12 @@ function startTextAdventure() {
               situationalText = situationalText.join(" ");
 
               //% Textformatierung Situationstext und Maximale Zeilenlänge
-              situationalText = formatText(situationalText, 80); //! Seltsames Verhalten, da Text unerwartet umbricht und scheinbar nicht auf Zeilenlänge reagiert
+              situationalText = formatText(situationalText, 80); //! Seltsames Verhalten, da Text unerwartet umbricht und nicht auf Zeilenlänge reagiert
 
               text =
                 text +
                 `${colors.g} > ${situationalText} ${colors.reset}` +
-                `\n${colors.y}(Wähle ${z})${colors.reset} \n\n`;
+                `\n${colors.c}(Wähle ${z})${colors.reset} \n\n`;
             }
             break;
           }
@@ -138,26 +173,27 @@ function startTextAdventure() {
         console.log("\n> " + text + "\n");
 
         // Überprüfung, ob Auswahlmöglichkeiten vorhanden sind
+
         if (amountOfElementsInLinksArray === 0) {
           const restartChoice = readlineSync.question(
-            `${colors.r} Wenn du möchtest, kannst du nochmal von vorne beginnen und Luna auf einem anderen Verlauf der Geschichte folgen (Ja/Nein).
-            Du kannst das Spiel auch beenden indem du Strg + C drückst. ${colors.reset}`
+            `${colors.g} Wenn du möchtest, kehre zurück ins Hauptmenü und folge Luna auf einem anderen Weg der Geschichte (Ja/Nein).
+             Du kannst das Programm auch ganz beenden indem du Strg + C drückst. ${colors.reset}`
           );
 
           if (restartChoice.toLowerCase() === "ja") {
             console.clear();
+            // Hauptmenü erneut anzeigen
             startTextAdventure();
             return;
           } else {
-            console.log(
-              `${colors.y}Vielen Dank fürs Spielen! Bis zum nächsten Mal!${colors.reset}`
-            );
+            console.clear(); // vorherige ausgaben clearen
+            console.log(tschauMiau);
             return;
           }
         } else {
           // check user Input, wenn Auswahlmöglichkeiten vorhanden
           const userInput = readlineSync.question(
-            `\n${colors.c}Triff eine Entscheidung ${colors.reset}`
+            `\n${colors.c}... ${colors.reset}`
           );
           console.clear();
 
@@ -181,20 +217,90 @@ function startTextAdventure() {
       break;
     case "l":
       console.clear();
-      console.log("Luna wird vorgestellt...");
+      console.log(
+        `${colors.c}Hier kannst du Luna ein paar Eigenschaften nach deinen Vorstellungen geben.${colors.reset}\n`
+      );
+      console.log(
+        `${colors.b}Wenn du keine Angaben machen und dich lieber überraschen lassen möchtest, drücke nach jeder Frage einfach die ENTER-Taste.${colors.reset}\n`
+      );
+      // User Input für Luna
+
+      const color = readlineSync.question("Welche Fellfarbe hat Luna? ... ");
+      const age = readlineSync.question("Wie alt ist Luna? ... ");
+      const breed = readlineSync.question("Zu welcher Rasse gehört Luna? ...");
+      const pattern = readlineSync.question(
+        "Hat Luna ein besonderes Fellmuster? Beschreibe es: ... "
+      );
+      const character = readlineSync.question("Beschreibe Lunas Charakter:");
+      const specialFeature = readlineSync.question(
+        "Welche besondere Fähigkeit hat Luna?"
+      );
+
+      const myLuna = new Luna(
+        color ? color : "grau",
+        age ? age : "5",
+        breed ? breed : "Ägyptische Mau",
+        pattern ? pattern : "getupft",
+        character
+          ? character
+          : "freundlich, menschenbezogen, verspielt, intelligent",
+        specialFeature
+          ? specialFeature
+          : "Sie ist mit 50km/h die schnellste Katze unter den Hauskatzen."
+      );
+
+      catCharacter.push(myLuna);
+
+      console.clear(); // vorherige Eingabeauforderungen clearen
+
+      console.log(`\n Jetzt ist Luna einzigartig! ${symbols.catHappy} \n `);
+
+      console.log(
+        `Deine Luna ist ${colors.m}${myLuna.color}${colors.reset} und ${colors.b}${myLuna.age}${colors.reset} Jahre alt.`
+      );
+      console.log(
+        `Sie gehört zur Rasse ${colors.g}${myLuna.breed}${colors.reset}. Ihr Fellmuster ist: ${colors.r}${myLuna.pattern}${colors.reset}.`
+      );
+      console.log(
+        `Lunas Charakter ist ${colors.c}${myLuna.character}${colors.reset}.`
+      );
+      console.log(
+        `Ihre besondere Fähigkeit ist: ${colors.y}${myLuna.specialFeature}${colors.reset}.\n`
+      );
+
+      // zurück zum Hauptmenü
+      readlineSync.question(backToMainMenu);
+      console.clear();
+      startTextAdventure();
+
       break;
+
     case "i":
       console.clear();
       let gameinfo = formatText(infotext, 100);
-      console.log("Über das Spiel...\n\n" + gameinfo + "\n");
+
+      console.log(
+        `\n${colors.b}${title}: ${subtitle}${colors.reset} (${version}) ist ein Text-Adventure-Spiel, das ${colors.b}${year}${colors.reset} von ${author} entwickelt wurde.\n`
+      );
+
+      console.log(`\x1b[3m${gameinfo}\x1b[0m \n`); // kursiver Text mit \x1b[3m => ANSI-Escape-Sequenz
+
+      // zurück zum Hauptmenü
+      readlineSync.question(backToMainMenu);
+      console.clear();
+      startTextAdventure();
+
       break;
+
     case "b":
       console.clear();
-      console.log("Beende das Spiel...");
+      console.log(tschauMiau);
       return;
     default:
       console.clear();
-      console.log("Katzenminze im Kopf?. Bitte versuche es erneut.");
+      console.log(
+        `\n ${colors.m}Katzenminze im Kopf? Bitte versuche es erneut.${colors.reset} \n`
+      );
       startTextAdventure();
       return;
   }

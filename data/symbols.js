@@ -40,5 +40,15 @@ export const symbols = {
   safetyPin: "\uD83E\uDDF7",
   nazarAmulett: "\uD83E\uDDFF",
   prayerBeads: "\uD83D\uDCFF",
+  portal: "\ud83c\udf00",
+  desert: "\uD83C\uDFDC",
+  speech: "\uD83D\uDCAC",
+  eye: "\uD83D\uDC41\uFE0F",
+  skull: "\uD83D\uDC80",
+  bulb: "\uD83D\uDCA1",
+  straightArrow: "\u2B06\uFE0F",
+  uprightArrow: "\u2197\uFE0F",
+  questionmark: "\u2754",
+  backArrow: "\u2B05\uFE0F",
 };
 // module.exports = symbols;

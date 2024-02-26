@@ -139,9 +139,6 @@ function startTextAdventure() {
 
         for (let x = 0; x < storyArray.length; x++) {
           if (storyArray[x].id == searched) {
-            // Test
-            // console.log("Text aus storyArray[x].text:", storyArray[x].text);
-
             text = storyArray[x].text + "\n\n";
 
             amountOfElementsInLinksArray = storyArray[x].thisLinksTo.length;
@@ -150,10 +147,6 @@ function startTextAdventure() {
               let goTo = storyArray[x].thisLinksTo[z];
 
               let situationalText = findId(goTo);
-
-              // Test
-              // console.log("situationalText:", situationalText);
-              // console.log("Aktueller Wert von text vor der Zeile:", text);
 
               situationalText = situationalText.join(" ");
 

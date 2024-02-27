@@ -14,9 +14,11 @@ import { readFile } from "fs/promises";
 // 2.
 async function readJSONFile(filePath) {
   try {
+    // try-catch-Block, um Fehler abzufangen
     const jsonData = await readFile(filePath, "utf-8");
     return JSON.parse(jsonData);
   } catch (error) {
+    // Hier wird der Fehler abgefangen und behandelt
     console.error("Error reading JSON file:", error);
     return null;
   }

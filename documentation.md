@@ -53,6 +53,26 @@ const data = await readJSONFile("./story.json");
 ´´´
 ```
 
+In diesem Code-Ausschnitt wird eine Funktion namens readJSONFile definiert, die eine JSON-Datei liest und deren Inhalt als JavaScript-Objekt zurückgibt. Hier ist eine Erläuterung, was im Code passiert:
+
+1. Es wird readFile aus dem Modul "fs/promises" importiert. Dieses Modul bietet eine Promis-basierte API für Dateioperationen in Node.js, was bedeutet, dass die Dateioperationen asynchron sind und Promises zurückgeben.
+
+   Eine Promis-basierte API für Dateioperationen in Node.js ist eine Möglichkeit, Dateioperationen wie Lesen, Schreiben und Bearbeiten von Dateien durch die Verwendung von Promises zu handhaben.
+
+2. Die Funktion readJSONFile wird definiert. Sie ist mit dem Schlüsselwort async gekennzeichnet, was bedeutet, dass sie eine asynchrone Funktion ist. Asynchrone Funktionen in JavaScript ermöglichen es, Code zu schreiben, der asynchronen Operationen durch die Verwendung von await handhabt.
+
+3. Innerhalb der Funktion wird versucht, den Inhalt der JSON-Datei mit readFile(filePath, "utf-8") zu lesen. readFile gibt ein Promise zurück, das den Inhalt der Datei enthält, wenn die Operation erfolgreich ist.
+
+   try und catch sind Schlüsselwörter in JavaScript, die verwendet werden, um Fehler in einem Codeblock abzufangen und zu behandeln. Hier ist eine kurze Erklärung, wie sie funktionieren:
+
+4. Wenn das Promise erfolgreich aufgelöst wird, wird der Inhalt der Datei als JSON-String (jsonData) zurückgegeben.
+
+5. Der JSON-String wird dann mit JSON.parse(jsonData) in ein JavaScript-Objekt umgewandelt und zurückgegeben.
+
+6. Wenn während des Lesens oder Analysierens der Datei ein Fehler auftritt, wird der Fehler im catch-Block abgefangen, die Fehlermeldung wird auf der Konsole ausgegeben, und die Funktion gibt null zurück.
+
+Zusammenfassend: Die Funktion readJSONFile liest eine JSON-Datei asynchron, wandelt deren Inhalt in ein JavaScript-Objekt um und gibt es zurück. Die Verwendung von async ermöglicht es, asynchronen Code zu schreiben und zu handhaben, während await verwendet wird, um auf die Auflösung von asynchronen Operationen zu warten.
+
 ## Play-Modus
 
 1. Fall "p" (Spiel starten):

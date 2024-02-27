@@ -9,6 +9,9 @@ Daher biete ich zu Beginn erst mal ein paar Optionen an. Im weiteren Spielverlau
 
 Da das Spiel nur im Terminal läuft, erschien mir das Bauen eines Textadventures inhaltlich recht passend.
 
+Zu Beginn des Projekts habe ich mir erst einmal Zeit für Recherche zum Genre genommen:
+https://miro.com/app/board/uXjVNqn4rVc=/
+
 ## Code-Aufbau (grob)
 
 Dieser Code richtet ein textbasiertes Adventure-Spiel in JavaScript ein.

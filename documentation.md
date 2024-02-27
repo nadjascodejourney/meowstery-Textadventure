@@ -80,6 +80,69 @@ function findId(searchedId) {
 ´´´
 ```
 
+4. Funktion findText:
+
+```javascript
+function findText(searched) { // Diese Zeile definiert die Funktion findText, die einen Parameter searched erwartet. Dieser Parameter repräsentiert die ID der gesuchten Situation im Spiel.
+let text;
+let amountOfElementsInLinksArray;
+
+for (let x = 0; x < storyArray.length; x++) {
+if (storyArray[x].id == searched) { // Eine Schleife durchläuft das storyArray, um die passende Situation basierend auf der übergebenen ID (searched) zu finden.
+text = storyArray[x].text + "\n\n";
+amountOfElementsInLinksArray = storyArray[x].thisLinksTo.length;
+// Wenn die passende Situation gefunden wurde, wird der Text dieser Situation in der Variablen text gespeichert. Außerdem wird die Anzahl der Auswahlmöglichkeiten für diese Situation in amountOfElementsInLinksArray gespeichert.
+
+      for (let z = 0; z < amountOfElementsInLinksArray; z++) {
+        //Eine weitere Schleife durchläuft die Auswahlmöglichkeiten (Links) für die aktuelle Situation.
+
+        let goTo = storyArray[x].thisLinksTo[z];
+        let situationalText = findId(goTo);
+        situationalText = situationalText.join(" ");
+
+        // Für jede Auswahlmöglichkeit wird die ID der nächsten Situation abgerufen und der dazugehörige Text wird aus dem storyArray mithilfe der Funktion findId abgerufen. Der Text wird dann formatiert und in der Variablen situationalText gespeichert.
+
+        // Zusammengefasst bedeutet die Zeile, dass goTo auf die ID der Situation verweist, zu der die aktuelle Verlinkung führt. Dies ist wichtig, um den Text und die Auswahlmöglichkeiten für die nächste Situation im Spiel zu finden und anzuzeigen.
+
+        // Indem goTo innerhalb der Funktion definiert wird, bleibt der gesamte Prozess zur Verarbeitung der Auswahlmöglichkeiten in einem zusammenhängenden Kontext.
+
+        //... [weiterer Code]
+      }
+      break; // Die Schleife wird unterbrochen, sobald die passende Situation gefunden wurde.
+    }
+
+}
+text = formatText(text, 80);
+console.log("\n> " + text + "\n");
+// Der gesamte Text für die aktuelle Situation wird formatiert und dann in der Konsole ausgegeben.
+// ...
+}
+´´´
+```
+
+Nähere Erklärung:
+
+- 'findText' ist Eine Funktion, die verwendet wird, um den Text und die Auswahlmöglichkeiten für eine bestimmte Situation im Spiel zu finden und anzuzeigen.
+- 'searched': Der Parameter, der die ID der gesuchten Situation darstellt.
+- Die Funktion durchläuft das 'storyArray', um den Text und die Auswahlmöglichkeiten zu finden. Sie bereitet den Text formatiert vor und zeigt ihn an.
+- Die Funktion enthält auch eine Schleife für die Auswahlmöglichkeiten innerhalb einer Situation.
+
+5. Quiz Funktion
+
+Diese Funktion steht derzeit innerhalb der findText(), da ja erst die Situation gefunden werden muss, die auch ein Quiz beinhaltet. Wegen diesem Kontext habe ich mich dazu entschieden, die Funktion hier zu setzen. Ein Pro-Argument hierfür ist, dass die quiz()-Funktion innerhalb von findText() zu platzieren, da sie eng miteinander verbunden sind. Beide Funktionen arbeiten zusammen, um dem Spieler die Situation im Spiel zu präsentieren und mögliche Quizfragen zu stellen.
+
+Es gibt aber auch Nachteile, weshalb ich die Funktionen beim nächsten Mal lieber getrennt schreiben möchte. Nachteile sind: Unübersichtlichkeit, Wiederverwendbarkeit, Fehlende Trennung von Funktionsverantwortlichkeiten, nicht so klare Kapselung, schwer zu lesen für andere Entwickler.
+
+## Luna Modus
+
+Dieser Codeblock ermöglicht es dem Benutzer, die Eigenschaften von Luna individuell festzulegen und diese im weiteren Verlauf des Text-Abenteuers zu verwenden.
+
+- Ein neues Luna-Objekt wird mit den vom Benutzer eingegebenen Eigenschaften erstellt. Falls der Benutzer keine Eingaben gemacht hat, werden Standardwerte verwendet.
+
+- Das Luna-Objekt wird mit new Luna(...) erstellt, wobei die eingegebenen oder Standardwerte als Argumente übergeben werden.
+
+- Das erstellte Luna-Objekt wird dann dem Array catCharacter hinzugefügt, um es später im Spiel zu verwenden.
+
 ## Weitere Funktionen:
 
 # Formatierungsfunktion:

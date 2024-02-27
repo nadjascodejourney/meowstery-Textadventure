@@ -234,6 +234,8 @@ function startTextAdventure() {
         text = formatText(text, 80); //% Textformatierung Haupttext + Maximale Zeilenlänge
         console.log("\n> " + text + "\n");
 
+        // ...............................................................
+
         //* Überprüfung, ob überhaupt Auswahlmöglichkeiten vorhanden sind
 
         if (amountOfElementsInLinksArray === 0) {
@@ -253,13 +255,15 @@ function startTextAdventure() {
             return;
           }
         } else {
-          // check user Input, wenn Auswahlmöglichkeiten vorhanden
+          //* check user Input, wenn Auswahlmöglichkeiten vorhanden
+
           const userInput = readlineSync.question(
             `\n${colors.c}... ${colors.reset}`
           );
           console.clear();
 
           // Wenn Auswahlmöglichkeiten vorhanden sind, wird auf Benutzereingabe gewartet und überprüft, ob die Eingabe gültig ist.
+
           const userDecision = parseInt(userInput);
           if (
             !isNaN(userDecision) && // überprüft, ob die Eingabe eine Zahl ist

@@ -1,4 +1,4 @@
-## Textadventures
+# Textadventures
 
 Textadventure-Spiele, auch bekannt als Interactive Fiction, begannen in den 1970er Jahren mit einfachen Textbasierten Spielen wie "Adventure". In den 1980er Jahren erlebten sie mit Titeln wie "Zork" und "The Hitchhiker's Guide to the Galaxy" ihren Höhepunkt. Die Popularität ging in den 1990er Jahren zurück, erlebte jedoch in den 2000ern eine Renaissance dank moderner Entwicklungswerkzeuge und Online-Plattformen. Heute werden Textadventures oft von unabhängigen Entwicklern erstellt und finden auf verschiedenen Plattformen eine treue Fangemeinde.
 
@@ -31,7 +31,7 @@ Dieser Code richtet ein textbasiertes Adventure-Spiel in JavaScript ein.
 
 9. Sonstiges: Farben, Schriftformatierung, Einbau von Emojis
 
-# JSON und ES modules node
+## JSON und ES modules node
 
 ```javascript
 // JSON file bzw. Daten der Geschichte mit ES Modules Node einlesen:
@@ -221,6 +221,16 @@ Diese Teytbefehle schreibt man VOR den Call der Funktion formatText(). So wird d
 Die Konkatenation führte zu einem unerwartetem Ergebnis bzw. zu der Fehlermeldung.
 
 Momentan besteht noch das Problem, dass die formatText() nicht richtig auf die situationalText Variable angewendet wird. Vermutlich liegt das an der Konkatenierung von situationalText und text (beides wird dann zu text assignd) und der anschließenden Formatierung von text mit formatText().
+
+# Konsole clearen (Eigene Funktion)
+
+Die clearConsole-Funktion ist darauf ausgelegt, die Konsolenausgabe zu löschen, aber nur wenn die Standardausgabe des aktuellen Prozesses (process.stdout) an ein TTY (Teletypschreiber) angeschlossen ist, was normalerweise bedeutet, dass sie in einem Terminal oder einer Eingabeaufforderung ausgeführt wird.
+
+process.stdout.isTTY: Diese Eigenschaft überprüft, ob die Standardausgabe mit einem TTY verbunden ist. Wenn dies der Fall ist, bedeutet dies, dass das Programm wahrscheinlich in einem Terminal läuft, in dem Konsolenmanipulationsbefehle wie das Löschen des Bildschirms anwendbar sind.
+
+process.stdout.write("\x1Bc"): Diese Zeile sendet den ANSI-Escape-Code \x1Bc an die Standardausgabe. In ANSI-Escape-Codes repräsentiert \x1B das Escape-Zeichen, und c ist eine Steuersequenz, die normalerweise das Terminal anweist, den Bildschirm zu löschen.
+
+Wenn also clearConsole() aufgerufen wird, löscht es den Konsolenbildschirm nur, wenn die Ausgabe ein TTY ist, was es für die Verwendung in Befehlszeilenanwendungen oder Skripten geeignet macht.
 
 ## Sonstiges
 

@@ -1,6 +1,13 @@
-## Bezug zu klassischen Textadventures und Konzept Auswahltexte
+## Textadventures
 
-Bei den frühen Textadventures gibt man als Spieler nur Textbefehle ein und muss selber erraten, welche Befehle das sein könnten je nachdem, was einem die Situation so bietet. Recht anspruchsvoll und vllt auch frustrierend, gerade am Anfang. Daher biete ich zu Beginn erst mal ein paar Optionen an. Im weiteren Spielverlauf könnte man auch mit Usereingaben weiterarbeiten, um das Spiel anspruchsvoller zu gestalten.
+Textadventure-Spiele, auch bekannt als Interactive Fiction, begannen in den 1970er Jahren mit einfachen Textbasierten Spielen wie "Adventure". In den 1980er Jahren erlebten sie mit Titeln wie "Zork" und "The Hitchhiker's Guide to the Galaxy" ihren Höhepunkt. Die Popularität ging in den 1990er Jahren zurück, erlebte jedoch in den 2000ern eine Renaissance dank moderner Entwicklungswerkzeuge und Online-Plattformen. Heute werden Textadventures oft von unabhängigen Entwicklern erstellt und finden auf verschiedenen Plattformen eine treue Fangemeinde.
+
+## Bezug zu klassischen Textadventures und Konzept
+
+Bei den ganz frühen Textadventures gibt man als Spieler nur Textbefehle ein und muss selber erraten, welche Befehle das sein könnten je nachdem, was einem die Situation so bietet. Recht anspruchsvoll und vllt auch frustrierend, gerade am Anfang.
+Daher biete ich zu Beginn erst mal ein paar Optionen an. Im weiteren Spielverlauf könnte man auch mit Usereingaben weiterarbeiten, um das Spiel anspruchsvoller zu gestalten.
+
+Da das Spiel nur im Terminal läuft, erschien mir das Bauen eines Textadventures inhaltlich recht passend.
 
 ## Code-Aufbau (grob)
 

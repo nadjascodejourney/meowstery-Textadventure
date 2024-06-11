@@ -10,7 +10,7 @@ Daher biete ich zu Beginn erst mal ein paar Optionen an. Im weiteren Spielverlau
 Da das Spiel nur im Terminal läuft, erschien mir das Bauen eines Textadventures inhaltlich recht passend.
 
 Zu Beginn des Projekts habe ich mir erst einmal Zeit für Recherche zum Genre genommen:
-https://miro.com/app/board/uXjVNqn4rVc=/
+[Research Board on Miro](https://miro.com/app/board/uXjVNqn4rVc=/?share_link_id=253230906656)
 
 ## Code-Aufbau (grob)
 
